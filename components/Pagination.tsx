@@ -55,8 +55,8 @@ const Pagination = ({ currentPage, totalPages, onPageChange }: PaginationProps) 
                         key={number}
                         onClick={() => onPageChange(number)}
                         className={`px-3 py-1 border rounded-md transition-colors ${currentPage === number
-                                ? 'bg-blue-500 text-white border-blue-500'
-                                : 'border-gray-300 text-gray-700 hover:bg-gray-50'
+                            ? 'bg-blue-500 text-white border-blue-500'
+                            : 'border-gray-300 text-gray-700 hover:bg-gray-50'
                             }`}
                         aria-label={`Page ${number}`}
                         aria-current={currentPage === number ? 'page' : undefined}
@@ -94,13 +94,14 @@ const Pagination = ({ currentPage, totalPages, onPageChange }: PaginationProps) 
             </div>
 
             {/* Page Size Selector (optional) */}
-            <div className="flex items-center space-x-2 text-sm">
-                <label htmlFor="itemsPerPage" className="text-gray-600">
+            <div className="flex items-center space-x-2 text-sm hover:cursor-not-allowed">
+                <label htmlFor="itemsPerPage" className="text-gray-600 hover:cursor-not-allowed">
                     Items per page:
                 </label>
                 <select
                     id="itemsPerPage"
-                    className="border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    disabled
+                    className="hover:cursor-not-allowed border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 // You would need to implement items per page functionality
                 // onChange={(e) => onItemsPerPageChange(Number(e.target.value))}
                 >

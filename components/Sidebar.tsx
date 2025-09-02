@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { Shield, Users, Settings, FileText } from "lucide-react";
 
 const navItems = [
-  { name: "Audit Logs", href: "/audit-logs", icon: FileText },
+  { name: "Audit Logs", href: "/dashboard", icon: FileText },
   { name: "Users", href: "/users", icon: Users },
   { name: "Admin", href: "/admin", icon: Shield },
   { name: "Settings", href: "/settings", icon: Settings },
@@ -32,8 +32,8 @@ export default function Sidebar() {
               href={href}
               className={`flex items-center gap-3 px-4 py-2 rounded-lg transition-colors ${
                 isActive
-                  ? "bg-gray-700"
-                  : " hover:bg-gray-800 hover:text-white"
+                  ? "bg-gray-700 text-white"
+                  : "hover:bg-gray-800 hover:text-white"
               }`}
             >
               <Icon size={18} />

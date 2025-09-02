@@ -53,7 +53,7 @@ export default function AuditLogDetail() {
     }
 
     return (
-        <div className="container mx-auto px-4 py-8 max-w-4xl">
+        <div className="container mx-auto px-4 py-8 w-[80vw] max-h-[100vh] overflow-y-scroll">
             <div className="mb-6">
                 <Link
                     href="/dashboard"
